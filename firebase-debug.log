@@ -1,0 +1,149 @@
+[debug] [2021-03-30T04:47:44.187Z] ----------------------------------------------------------------------
+[debug] [2021-03-30T04:47:44.189Z] Command:       /usr/local/bin/firebase /Users/shriraj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2021-03-30T04:47:44.189Z] CLI Version:   9.8.0
+[debug] [2021-03-30T04:47:44.189Z] Platform:      darwin
+[debug] [2021-03-30T04:47:44.189Z] Node Version:  v12.2.0
+[debug] [2021-03-30T04:47:44.193Z] Time:          Mon Mar 29 2021 21:47:44 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-03-30T04:47:44.193Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-03-30T04:47:44.200Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-30T04:47:44.201Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/shriraj/Documents/GitHub/hackathon
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using hackathon-309123. 
+[debug] [2021-03-30T04:47:44.207Z] > refreshing access token with scopes: []
+[debug] [2021-03-30T04:47:44.208Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-30T04:47:44.429Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Tue, 30 Mar 2021 04:47:44 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T04:47:44.446Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 [none]
+[debug] [2021-03-30T04:47:44.844Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 200
+[debug] [2021-03-30T04:47:44.844Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 {"projectId":"hackathon-309123","projectNumber":"678670925402","displayName":"Hackathon","name":"projects/hackathon-309123","resources":{"hostingSite":"hackathon-309123"},"state":"ACTIVE"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/shriraj/Documents/GitHub/hackathon 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=582605029&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-30T04:47:45.523Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"2febb808f2d5401b7ce4","redirect_uri":"http://localhost:9005","state":"582605029"}
+[debug] [2021-03-30T04:47:46.072Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 30 Mar 2021 04:47:46 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"779e7e25d65e5ce70032332ac0f3b95c\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-6832eced.js gist.github.com/socket-worker-6832eced.js","x-github-request-id":"EC15:6220:120BF:14F53:6062AD71"}
+[debug] [2021-03-30T04:47:46.076Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-03-30T04:47:46.568Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-03-30T04:47:46.568Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"shriraj20","id":59427722,"node_id":"MDQ6VXNlcjU5NDI3NzIy","avatar_url":"https://avatars.githubusercontent.com/u/59427722?v=4","gravatar_id":"","url":"https://api.github.com/users/shriraj20","html_url":"https://github.com/shriraj20","followers_url":"https://api.github.com/users/shriraj20/followers","following_url":"https://api.github.com/users/shriraj20/following{/other_user}","gists_url":"https://api.github.com/users/shriraj20/gists{/gist_id}","starred_url":"https://api.github.com/users/shriraj20/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/shriraj20/subscriptions","organizations_url":"https://api.github.com/users/shriraj20/orgs","repos_url":"https://api.github.com/users/shriraj20/repos","events_url":"https://api.github.com/users/shriraj20/events{/privacy}","received_events_url":"https://api.github.com/users/shriraj20/received_events","type":"User","site_admin":false,"name":null,"company":"Epic coders","blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":8,"public_gists":0,"followers":0,"following":0,"created_at":"2020-01-02T03:27:15Z","updated_at":"2021-03-30T02:49:57Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":13542,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as shriraj20 
+[info] 
+[debug] [2021-03-30T05:32:55.633Z] >>> [apiv2][query] GET https://api.github.com/repos/Epic-Coderss/Hackathon/actions/secrets/public-key type=owner
+[debug] [2021-03-30T05:32:55.938Z] <<< [apiv2][status] GET https://api.github.com/repos/Epic-Coderss/Hackathon/actions/secrets/public-key 200
+[debug] [2021-03-30T05:32:55.938Z] <<< [apiv2][body] GET https://api.github.com/repos/Epic-Coderss/Hackathon/actions/secrets/public-key {"key_id":"568250167242549743","key":"iWSQUT+rOABbb1ua2gGq1lXaONAjmNZbUWNTwrNCGS8="}
+[debug] [2021-03-30T05:32:55.945Z] >>> [apiv2][query] GET https://api.github.com/repos/Epic-Coderss/Hackathon [none]
+[debug] [2021-03-30T05:32:56.243Z] <<< [apiv2][status] GET https://api.github.com/repos/Epic-Coderss/Hackathon 200
+[debug] [2021-03-30T05:32:56.244Z] <<< [apiv2][body] GET https://api.github.com/repos/Epic-Coderss/Hackathon {"id":351907687,"node_id":"MDEwOlJlcG9zaXRvcnkzNTE5MDc2ODc=","name":"Hackathon","full_name":"Epic-Coderss/Hackathon","private":false,"owner":{"login":"Epic-Coderss","id":68831790,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY4ODMxNzkw","avatar_url":"https://avatars.githubusercontent.com/u/68831790?v=4","gravatar_id":"","url":"https://api.github.com/users/Epic-Coderss","html_url":"https://github.com/Epic-Coderss","followers_url":"https://api.github.com/users/Epic-Coderss/followers","following_url":"https://api.github.com/users/Epic-Coderss/following{/other_user}","gists_url":"https://api.github.com/users/Epic-Coderss/gists{/gist_id}","starred_url":"https://api.github.com/users/Epic-Coderss/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Epic-Coderss/subscriptions","organizations_url":"https://api.github.com/users/Epic-Coderss/orgs","repos_url":"https://api.github.com/users/Epic-Coderss/repos","events_url":"https://api.github.com/users/Epic-Coderss/events{/privacy}","received_events_url":"https://api.github.com/users/Epic-Coderss/received_events","type":"Organization","site_admin":false},"html_url":"https://github.com/Epic-Coderss/Hackathon","description":"Make a web page with both projects from steam and robotics club and let the student update theirs.","fork":false,"url":"https://api.github.com/repos/Epic-Coderss/Hackathon","forks_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/forks","keys_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/keys{/key_id}","collaborators_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/collaborators{/collaborator}","teams_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/teams","hooks_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/hooks","issue_events_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/issues/events{/number}","events_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/events","assignees_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/assignees{/user}","branches_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/branches{/branch}","tags_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/tags","blobs_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/git/blobs{/sha}","git_tags_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/git/tags{/sha}","git_refs_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/git/refs{/sha}","trees_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/git/trees{/sha}","statuses_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/statuses/{sha}","languages_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/languages","stargazers_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/stargazers","contributors_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/contributors","subscribers_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/subscribers","subscription_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/subscription","commits_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/commits{/sha}","git_commits_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/git/commits{/sha}","comments_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/comments{/number}","issue_comment_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/issues/comments{/number}","contents_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/contents/{+path}","compare_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/compare/{base}...{head}","merges_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/merges","archive_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/{archive_format}{/ref}","downloads_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/downloads","issues_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/issues{/number}","pulls_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/pulls{/number}","milestones_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/milestones{/number}","notifications_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/notifications{?since,all,participating}","labels_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/labels{/name}","releases_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/releases{/id}","deployments_url":"https://api.github.com/repos/Epic-Coderss/Hackathon/deployments","created_at":"2021-03-26T20:45:11Z","updated_at":"2021-03-30T02:07:52Z","pushed_at":"2021-03-30T02:07:49Z","git_url":"git://github.com/Epic-Coderss/Hackathon.git","ssh_url":"git@github.com:Epic-Coderss/Hackathon.git","clone_url":"https://github.com/Epic-Coderss/Hackathon.git","svn_url":"https://github.com/Epic-Coderss/Hackathon","homepage":null,"size":86,"stargazers_count":0,"watchers_count":0,"language":"HTML","has_issues":false,"has_projects":false,"has_downloads":true,"has_wiki":true,"has_pages":true,"forks_count":0,"mirror_url":null,"archived":false,"disabled":false,"open_issues_count":0,"license":{"key":"mit","name":"MIT License","spdx_id":"MIT","url":"https://api.github.com/licenses/mit","node_id":"MDc6TGljZW5zZTEz"},"forks":0,"open_issues":0,"watchers":0,"default_branch":"main","permissions":{"admin":true,"push":true,"pull":true},"temp_clone_token":"","allow_squash_merge":false,"allow_merge_commit":true,"allow_rebase_merge":false,"delete_branch_on_merge":false,"organization":{"login":"Epic-Coderss","id":68831790,"node_id":"MDEyOk9yZ2FuaXphdGlvbjY4ODMxNzkw","avatar_url":"https://avatars.githubusercontent.com/u/68831790?v=4","gravatar_id":"","url":"https://api.github.com/users/Epic-Coderss","html_url":"https://github.com/Epic-Coderss","followers_url":"https://api.github.com/users/Epic-Coderss/followers","following_url":"https://api.github.com/users/Epic-Coderss/following{/other_user}","gists_url":"https://api.github.com/users/Epic-Coderss/gists{/gist_id}","starred_url":"https://api.github.com/users/Epic-Coderss/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Epic-Coderss/subscriptions","organizations_url":"https://api.github.com/users/Epic-Coderss/orgs","repos_url":"https://api.github.com/users/Epic-Coderss/repos","events_url":"https://api.github.com/users/Epic-Coderss/events{/privacy}","received_events_url":"https://api.github.com/users/Epic-Coderss/received_events","type":"Organization","site_admin":false},"network_count":0,"subscribers_count":0}
+[debug] [2021-03-30T05:32:56.254Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-30T05:32:56.254Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-30T05:32:56.413Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Tue, 30 Mar 2021 05:32:56 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T05:32:56.433Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/hackathon-309123/serviceAccounts  
+ {"accountId":"github-action-351907687","serviceAccount":{"displayName":"GitHub Actions (Epic-Coderss/Hackathon)","description":"A service account with permission to deploy to Firebase Hosting for the GitHub repository Epic-Coderss/Hackathon"}}
+[debug] [2021-03-30T05:32:57.024Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Tue, 30 Mar 2021 05:32:56 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T05:32:57.025Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Service account github-action-351907687 already exists within project projects/hackathon-309123.","status":"ALREADY_EXISTS","details":[{"@type":"type.googleapis.com/google.rpc.ResourceInfo","resourceName":"projects/hackathon-309123/serviceAccounts/github-action-351907687@hackathon-309123.iam.gserviceaccount.com"}]}}
+[debug] [2021-03-30T05:32:57.030Z] >>> HTTP REQUEST GET https://iam.googleapis.com/v1/projects/hackathon-309123/serviceAccounts/github-action-351907687@hackathon-309123.iam.gserviceaccount.com  
+ 
+[debug] [2021-03-30T05:32:57.032Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/hackathon-309123:getIamPolicy  
+ 
+[debug] [2021-03-30T05:32:57.296Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 30 Mar 2021 05:32:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=134","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T05:33:07.218Z] Error: socket hang up
+    at createHangUpError (_http_client.js:342:17)
+    at TLSSocket.socketOnEnd (_http_client.js:443:23)
+    at TLSSocket.emit (events.js:201:15)
+    at TLSSocket.EventEmitter.emit (domain.js:471:20)
+    at endReadableNT (_stream_readable.js:1130:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:9)
+[error] 
+[error] Error: Server Error. socket hang up
+[debug] [2021-03-30T14:53:25.560Z] ----------------------------------------------------------------------
+[debug] [2021-03-30T14:53:25.561Z] Command:       /usr/local/bin/firebase /Users/shriraj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init hosting:github
+[debug] [2021-03-30T14:53:25.562Z] CLI Version:   9.8.0
+[debug] [2021-03-30T14:53:25.562Z] Platform:      darwin
+[debug] [2021-03-30T14:53:25.562Z] Node Version:  v12.2.0
+[debug] [2021-03-30T14:53:25.565Z] Time:          Tue Mar 30 2021 07:53:25 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-03-30T14:53:25.566Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-03-30T14:53:25.573Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-30T14:53:25.574Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/shriraj/Documents/GitHub/hackathon
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using hackathon-309123. 
+[debug] [2021-03-30T14:53:25.580Z] > refreshing access token with scopes: []
+[debug] [2021-03-30T14:53:25.580Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-30T14:53:25.848Z] <<< HTTP RESPONSE 200 {"date":"Tue, 30 Mar 2021 14:53:26 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-30T14:53:25.873Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 [none]
+[debug] [2021-03-30T14:53:26.153Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 200
+[debug] [2021-03-30T14:53:26.153Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hackathon-309123 {"projectId":"hackathon-309123","projectNumber":"678670925402","displayName":"Hackathon","name":"projects/hackathon-309123","resources":{"hostingSite":"hackathon-309123"},"state":"ACTIVE"}
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/shriraj/Documents/GitHub/hackathon 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=663155835&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-30T14:53:26.739Z] >>> HTTP REQUEST POST https://github.com/login/oauth/access_token  
+ {"client_id":"89cf50f02ac6aaed3484","client_secret":"3330d14abc895d9a74d5f17cd7a00711fa2c5bf0","code":"6f6e60517e14623a5358","redirect_uri":"http://localhost:9005","state":"663155835"}
+[debug] [2021-03-30T14:53:27.062Z] <<< HTTP RESPONSE 200 {"server":"GitHub.com","date":"Tue, 30 Mar 2021 14:53:27 GMT","content-type":"application/json; charset=utf-8","transfer-encoding":"chunked","vary":"X-PJAX, Accept-Encoding, Accept, X-Requested-With","etag":"W/\"53a51bee26d053fec5a621310e67283a\"","cache-control":"max-age=0, private, must-revalidate","strict-transport-security":"max-age=31536000; includeSubdomains; preload","x-frame-options":"deny","x-content-type-options":"nosniff","x-xss-protection":"0","referrer-policy":"origin-when-cross-origin, strict-origin-when-cross-origin","expect-ct":"max-age=2592000, report-uri=\"https://api.github.com/_private/browser/errors\"","content-security-policy":"default-src 'none'; base-uri 'self'; block-all-mixed-content; connect-src 'self' uploads.github.com www.githubstatus.com collector.githubapp.com api.github.com github-cloud.s3.amazonaws.com github-production-repository-file-5c1aeb.s3.amazonaws.com github-production-upload-manifest-file-7fdce7.s3.amazonaws.com github-production-user-asset-6210df.s3.amazonaws.com cdn.optimizely.com logx.optimizely.com/v1/events wss://alive.github.com; font-src github.githubassets.com; form-action 'self' github.com gist.github.com; frame-ancestors 'none'; frame-src render.githubusercontent.com; img-src 'self' data: github.githubassets.com identicons.github.com collector.githubapp.com github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/ *.githubusercontent.com; manifest-src 'self'; media-src 'none'; script-src github.githubassets.com; style-src 'unsafe-inline' github.githubassets.com; worker-src github.com/socket-worker-6832eced.js gist.github.com/socket-worker-6832eced.js","x-github-request-id":"C05F:93F6:4B9AB1:57661D:60633B67"}
+[debug] [2021-03-30T14:53:27.065Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2021-03-30T14:53:27.383Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2021-03-30T14:53:27.383Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"shriraj20","id":59427722,"node_id":"MDQ6VXNlcjU5NDI3NzIy","avatar_url":"https://avatars.githubusercontent.com/u/59427722?v=4","gravatar_id":"","url":"https://api.github.com/users/shriraj20","html_url":"https://github.com/shriraj20","followers_url":"https://api.github.com/users/shriraj20/followers","following_url":"https://api.github.com/users/shriraj20/following{/other_user}","gists_url":"https://api.github.com/users/shriraj20/gists{/gist_id}","starred_url":"https://api.github.com/users/shriraj20/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/shriraj20/subscriptions","organizations_url":"https://api.github.com/users/shriraj20/orgs","repos_url":"https://api.github.com/users/shriraj20/repos","events_url":"https://api.github.com/users/shriraj20/events{/privacy}","received_events_url":"https://api.github.com/users/shriraj20/received_events","type":"User","site_admin":false,"name":null,"company":"Epic coders","blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":8,"public_gists":0,"followers":0,"following":0,"created_at":"2020-01-02T03:27:15Z","updated_at":"2021-03-30T02:49:57Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":13542,"collaborators":1,"two_factor_authentication":false,"plan":{"name":"pro","space":976562499,"collaborators":0,"private_repos":9999}}
+[info] 
+[info] ✔  Success! Logged into GitHub as shriraj20 
+[info] 
+[debug] [2021-03-30T14:53:49.074Z] >>> [apiv2][query] GET https://api.github.com/repos/Epic-Codderss/Hackathon/actions/secrets/public-key type=owner
+[debug] [2021-03-30T14:53:49.306Z] <<< [apiv2][status] GET https://api.github.com/repos/Epic-Codderss/Hackathon/actions/secrets/public-key 404
+[debug] [2021-03-30T14:53:49.306Z] <<< [apiv2][body] GET https://api.github.com/repos/Epic-Codderss/Hackathon/actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest/reference/actions#get-a-repository-public-key"}
