@@ -2,7 +2,7 @@
   "name": "hackathon",
   "version": "0.0.1",
   "description": "Make a web page with both projects from steam and robotics club and let the student update theirs.",
-  "main": "n/a",
+  "main": "Public/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
