@@ -7,13 +7,17 @@
     <link rel="js" href="../client_secret_771815263609-8281t936kuu8n98cverdva12rphk1p23.apps.googleusercontent.com.json">
     <script src="index.js"></script>
     <style>
-.bro{
+        /*g-signin2 {*/
+        /*    padding: 5px;*/
+        /*    position: fixed;*/
+        /*    right: 1000px;*/
+        /*}*/
+
+#Guest {
+    width: 120px;
     position: fixed;
-    right: 15px;
-}
-#alien{
-    position: relative;
-    left: 1060px;
+    left: 600px;
+    top: 300px;
 }
     </style>
     <title>Steam Club Login</title>
@@ -52,19 +56,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Steam Clubs</a>
-
+    <div style="position: fixed; left: 600px; bottom: 600px;" class="g-signin2" data-onsuccess="onSignIn" onclick="location.href='SteamClubGuestView.html'"></div>
+<button type="button" onclick="window.location.href='SteamClubGuestView.html'" class="btn btn-light" id="Guest">Guest View</button>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <div class="g-signin2" id="alien" data-onsuccess="onSignIn"></div>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="bro" onclick="window.location.href='SteamClubGuestView.html'" class="btn btn-light" id="Guest">Guest View</button>
-            </li>
 <!--            <li class="nav-item active">-->
 <!--                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>-->
 <!--            </li>-->
