@@ -35,20 +35,11 @@
         var profile = googleUser.getBasicProfile();
         var Name = profile.getName();
         var Email = profile.getEmail();
-        console.log(name);
-        console.log(email);
-    const {GoogleSpreadsheet} = require('google-spreadsheet');
-    const doc = new GoogleSpreadsheet('1MWo9RqytzabCPOUWs5QhJHq6wAkU2VTAHZXuaVAyB2I');
-    await doc.useServiceAccountAuth({
-    client_email:  '771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com',
-    private_key: 'AIzaSyD51IMjNVPkCk7fBZiYx7bxltH3qySJCTc',
-});
-const sheet = await doc.addSheet({ headerValues: ['name', 'email', 'role'] });
-const addRow = await.doc.addRow({name: Name, email: Email, role:'default'});
-await rows.save();
+        console.log(Name);
+        console.log(Email);
+    }
 //        document.querySelector("#content").innerText =
   //          googleUser.getBasicProfile().getGivenName();
-    }
 </script>
 
 <!-- Use this code to log the user out-->
