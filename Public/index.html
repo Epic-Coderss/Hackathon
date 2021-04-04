@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="1003913934729-pviegi3eji50egnde16lprqcarffvn0g.apps.googleusercontent.com">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="js" href="../client_secret_771815263609-8281t936kuu8n98cverdva12rphk1p23.apps.googleusercontent.com.json">
     <script src="index.js"></script>
     <style>
         /*g-signin2 {*/
@@ -21,10 +20,45 @@
 }
     </style>
     <title>Steam Club Login</title>
+    <meta name="google-signin-client_id" content="771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer>
+</script>
 </head>
 <body>
-<div style="position: fixed; left: 600px; bottom: 500px;" class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
 <button type="button" onclick="window.location.href='SteamClubGuestView.html'" class="btn btn-light" id="Guest">Guest View</button>
+<div id="content"></div>
+
+<script>
+    const SPREADSHEET_ID = '1MWo9RqytzabCPOUWs5QhJHq6wAkU2VTAHZXuaVAyB2I';
+    const CLIENT_ID = '771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com';
+    const API_KEY = 'AIzaSyDxpSiLvCABPAXnX09ZwP8QlAw_5Ti0SIE';
+    const SCOPE = ''
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var name = profile.getName();
+        var email = profile.getEmail();
+        console.log(name);
+        console.log(email);
+//        document.querySelector("#content").innerText =
+  //          googleUser.getBasicProfile().getGivenName();
+    }
+</script>
+
+<!-- Use this code to log the user out-->
+<!--
+
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+-->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Steam Clubs</a>
