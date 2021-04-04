@@ -1,23 +1,24 @@
 {
   "name": "hackathon",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Make a web page with both projects from steam and robotics club and let the student update theirs.",
-  "main": "Public/index.html",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-tools": "^9.8.0",
+    "google-classroom": "^2.1.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "build": "firebase deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Epic-Coderss/Hackathon.git"
   },
-  "author": "Horner Coding Club",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/Epic-Coderss/Hackathon/issues"
   },
-  "homepage": "https://github.com/Epic-Coderss/Hackathon#readme",
-  "dependencies": {
-    "firebase-tools": "^9.8.0"
-  }
+  "homepage": "https://github.com/Epic-Coderss/Hackathon#readme"
 }
