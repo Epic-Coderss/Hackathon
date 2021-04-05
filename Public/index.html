@@ -1,112 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="js" href="../client_secret_771815263609-8281t936kuu8n98cverdva12rphk1p23.apps.googleusercontent.com.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="js"
+        href="../client_secret_771815263609-8281t936kuu8n98cverdva12rphk1p23.apps.googleusercontent.com.json">
+    <script type="text/javascript" src="index.js"></script>
     <style>
-.bro{
-    position: fixed;
-}
-#alien{
-    position: relative;
-}
+        .bro {
+            position: fixed;
+        }
+
+        #alien {
+            position: relative;
+        }
 
 
-/* GLOBAL STYLES */
-body {
-  background: cyan;;
-}
 
+        /* GLOBAL STYLES */
+        .header {
+            background-image: url('../images/headerback.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay {
+            position: absolute;
+            min-height: 100%;
+            min-width: 100%;
+            left: 0;
+            top: 0;
+        }
     </style>
     <title>Steam Club Login</title>
-    <meta name="google-signin-client_id" content="771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com">
+    <meta name="google-signin-client_id"
+        content="771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer>
-</script>
+    </script>
 </head>
+
 <body>
 
 
-<div id="content"></div>
+    <div id="content" class=""></div>
 
-<script>
-        function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        var name = profile.getName();
-        console.log(Name);
-        console.log(Email);
 
-    }
-//        document.querySelector("#content").innerText =
-  //          googleUser.getBasicProfile().getGivenName();
-</script>
 
-<!-- Use this code to log the user out-->
+    <!-- Use this code to log the user out-->
 
-<!--<a href="#" onclick="signOut();">Sign out</a>-->
-<!--<script>-->
-<!--  function signOut() {-->
-<!--    var auth2 = gapi.auth2.getAuthInstance();-->
-<!--    auth2.signOut().then(function () {-->
-<!--      console.log('User signed out.');-->
-<!--    });-->
-<!--  }-->
-<!--</script>-->
+    <!--<a href="#" onclick="signOut();">Sign out</a>-->
+    <!--<script>-->
+    <!--  function signOut() {-->
+    <!--    var auth2 = gapi.auth2.getAuthInstance();-->
+    <!--    auth2.signOut().then(function () {-->
+    <!--      console.log('User signed out.');-->
+    <!--    });-->
+    <!--  }-->
+    <!--</script>-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-light bg-light">
+        <a class="navbar-brand" href="#">Steam Clubs</a>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Steam Clubs</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <div class="g-signin2" id="alien" data-onsuccess="onSignIn" onclick="location.href='SteamClubGuestView.html'"></div>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="bro" onclick="window.location.href='SteamClubGuestView.html'" class="btn btn-light" id="Guest">Guest View</button>
-            </li>
-<!--            <li class="nav-item active">-->
-<!--                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>-->
-<!--            </li>-->
-           <!-- <li class="nav-item">
+        <div class="collapse navbar-collapse" class="" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="g-signin2"></div>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="bro" onclick="window.location.href='SteamClubGuestView.html'"
+                        class="btn btn-light" id="Guest">Guest View</button>
+                </li>
+                <!--            <li class="nav-item active">-->
+                <!--                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>-->
+                <!--            </li>-->
+                <!-- <li class="nav-item">
                 <a class="nav-link" href="VexRobticsClub.html">Robotics Club</a>
             </li>-->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="HornerCdingClub.html">Coding Club</a>-->
-<!--            </li>-->
-        </ul>
+                <!--            <li class="nav-item">-->
+                <!--                <a class="nav-link" href="HornerCdingClub.html">Coding Club</a>-->
+                <!--            </li>-->
+            </ul>
+        </div>
+    </nav>
+
+    <div class="fixed-background">
+        <div class="fixed-wrap">
+            <div class="fixed">
+            </div>
+        </div>
     </div>
-</nav>
+
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+        //        document.querySelector("#content").innerText =
+        //          googleUser.getBasicProfile().getGivenName();
+    </script>
+
+    <h1 style="color: rgb(255, 81, 0); text-align: center;">Welcome to Steam Clubs!</h1>
+    <h1 style="color: rgb(255, 81, 0); text-align: center;">----------------------------------------------------</h1>
+    <h1 style="color: rgb(255, 81, 0); text-align: center;">A place for Clubs:</h1>
+    <h3 style="color: rgb(255, 81, 0); text-align: center;">To meet with each other</h3>
+    <h3 style="color: rgb(255, 81, 0); text-align: center;"> Engage as a group</h3>
+    <h3 style="color: rgb(255, 81, 0); text-align: center;">Share ideas</h3>
+    <h3 style="color: rgb(255, 81, 0); text-align: center;">Finially have fun</h3>
+    <h1 style="color: rgb(255, 81, 0); text-align: center;">----------------------------------------------------</h1>
+    <h1 style="color: rgb(255, 81, 0); text-align: center;">Team:</h1>
+    <!--Pranav-->
+    <!--Shriraj-->
+    <!--Nidi-->
 
 
-<h1 style="color: rgb(255, 81, 0); text-align: center;">Welcome to Steam Clubs!</h1>
-<h1 style="color: rgb(255, 81, 0); text-align: center;">----------------------------------------------------</h1>
-<h1 style="color: rgb(255, 81, 0); text-align: center;">A place for Clubs:</h1>
-<h3 style="color: rgb(255, 81, 0); text-align: center;">To meet with each other</h3>
-<h3 style="color: rgb(255, 81, 0); text-align: center;"> Engage as a group</h3>
-<h3 style="color: rgb(255, 81, 0); text-align: center;">Share ideas</h3>
-<h3 style="color: rgb(255, 81, 0); text-align: center;">Finially have fun</h3>
-<h1 style="color: rgb(255, 81, 0); text-align: center;">----------------------------------------------------</h1>
-<h1 style="color: rgb(255, 81, 0); text-align: center;">Team:</h1>
-<!--Pranav-->
-<!--Shriraj-->
-<!--Nidi-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.3.1/firebase-app.js"></script>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="/__/firebase/8.3.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<!-- Initialize Firebase -->
-<script src="/__/firebase/init.js"></script>
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
 </body>
+
 </html>
