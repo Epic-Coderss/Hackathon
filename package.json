@@ -4,6 +4,7 @@
   "description": "Make a web page with both projects from steam and robotics club and let the student update theirs.",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "firebase-tools": "^9.8.0",
     "google-spreadsheet": "^3.1.15"
   },
