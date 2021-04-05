@@ -1,0 +1,31 @@
+.colorred {
+    color: red;
+}
+
+.colorblue {
+    color: blue;
+}
+
+.colorgreen {
+    color: #42FF00;
+}
+
+.coloryellow {
+    color: yellow;
+}
+
+.colororange {
+    color: orange
+}
+
+.colorpurple {
+    color: #FF00F5;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
