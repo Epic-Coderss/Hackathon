@@ -30,9 +30,11 @@ function onSignIn(googleUser) {
     // This is null if the 'email' scope is not present.
 
     if (name == usernames && !(where == null)) {
-        var redirect= 'https://hackathon-309716.firebaseapp.com/SteamClubGuestView.html';
+        var redirect= 'https://hackathon-309716.firebaseapp.com/SteamClubGuestView.html';   
+        document.getElementById("signin").dataset.redirecturi == redirect;
     } else {
         var redirect = 'https://hornercodingclub.github.io/';
+        document.getElementById("signin").dataset.redirecturi == redirect;
     }
 
 
