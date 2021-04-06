@@ -27,7 +27,7 @@ const people = google.people('v1');
  * To use OAuth2 authentication, we need access to a a CLIENT_ID, CLIENT_SECRET, AND REDIRECT_URI.  To get these credentials for your application, visit https://console.cloud.google.com/apis/credentials.
  */
 const keyPath = path.join(__dirname, 'oauth2.keys.json');
-let keys = {redirect_uris: ['https://console.cloud.google.com/apis/credentials?project=hackathon-309716d']};
+let keys = {redirect_uris: ['']};
 if (fs.existsSync(keyPath)) {
     keys = require(keyPath).web;
 }
@@ -38,7 +38,7 @@ if (fs.existsSync(keyPath)) {
 const oauth2Client = new google.auth.OAuth2(
     keys.client_id,
     keys.client_secret,
-    keys.redirect_uris[1]
+    keys.redirect_uris[0]
 );
 
 /**
