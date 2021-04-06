@@ -111,24 +111,6 @@
         </div>
     </nav>
 
-    <script>
-        const history = useHistory();
-        history.push("SteamClubGuestView");
-
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            var name = profile.getName();
-            var email = profile.getEmail();
-            console.log(name);
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log(email);
-            var id_token = googleUser.getAuthResponse().id_token;
-            // This is null if the 'email' scope is not present.
-        }
-        //        document.querySelector("#content").innerText =
-        //          googleUser.getBasicProfile().getGivenName();
-    </script>
-
     <h1 class="bold welcome">Welcome to Steam Clubs!</h1>
     <img class="hornerlogo figure-img img-fluid rounded"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVe1PeLYzBts3WQTxqyDBGf16z6kw9x4d6A&usqp=CAU"
