@@ -87,12 +87,14 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+
+
         <div class="collapse navbar-collapse" class="" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-onsuccess="onSignIn"
                         data-scope="https://www.googleapis.com/auth/plus.login" data-accesstype="offline"
-                        data-redirecturi="https://hackathon-309716.firebaseapp.com/SteamClubGuestView.html"></div>
+                        data-redirecturi= "https://hackathon-309716.firebaseapp.com/SteamClubGuestView.html"></div>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="bro" onclick="window.location.href='SteamClubGuestView.html'"
@@ -110,7 +112,10 @@
             </ul>
         </div>
     </nav>
-
+    <script>
+        website = "data-redirecturi= " + redirects;
+         document.getElementById("redirects").value =   website;       
+    </script>
     <h1 class="bold welcome">Welcome to Steam Clubs!</h1>
     <img class="hornerlogo figure-img img-fluid rounded"
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPVe1PeLYzBts3WQTxqyDBGf16z6kw9x4d6A&usqp=CAU"
