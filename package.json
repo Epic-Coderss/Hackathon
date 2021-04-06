@@ -6,7 +6,8 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "firebase-tools": "^9.8.0",
-    "google-spreadsheet": "^3.1.15"
+    "google-spreadsheet": "^3.1.15",
+    "googleapis": "^39.2.0"
   },
   "devDependencies": {},
   "scripts": {
