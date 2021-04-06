@@ -8,6 +8,7 @@
     "firebase-tools": "^9.8.0",
     "google-spreadsheet": "^3.1.15",
     "googleapis": "^70.0.0",
+    "server-destroy": "^1.0.1",
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {
