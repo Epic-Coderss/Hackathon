@@ -1,8 +1,8 @@
 const {google} = require('googleapis');
 
 const oauth2Client = new google.auth.OAuth2(
-    YOUR_CLIENT_ID,
-    YOUR_CLIENT_SECRET,
+    771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com,
+    K5z7Z3Ino25FPfGTtSEV5ujL,
     YOUR_REDIRECT_URL
 );
 
