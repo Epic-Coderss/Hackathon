@@ -30,7 +30,7 @@ function onSignIn(googleUser) {
   // This is null if the 'email' scope is not present.
 }
 
-function admin() {
+function adminClick() {
   if (name == usernames && !(where == null)) {
     window.location.replace('https://hackathon-309716.firebaseapp.com/adminPg.html')
   } else {
