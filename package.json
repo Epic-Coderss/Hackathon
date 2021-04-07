@@ -5,7 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "firebase-tools": "^9.8.0",
+    "firebase-tools": "^9.9.0",
     "google-spreadsheet": "^3.1.15",
     "googleapis": "^70.0.0",
     "open": "^8.0.5",
