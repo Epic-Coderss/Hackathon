@@ -10,6 +10,8 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+function myFunction(){
+
 
 'use strict';
 
@@ -53,7 +55,7 @@ async function authenticate(scopes) {
     return new Promise((resolve, reject) => {
         // grab the url that will be used for authorization
         const authorizeUrl = oauth2Client.generateAuthUrl({
-            access_type: 'offline',
+            access_type: 'online',
             scope: scopes.join(' '),
         });
         const server = http
@@ -105,3 +107,6 @@ const scopes = [
 authenticate(scopes)
     .then(client => runSample(client))
     .catch(console.error);
+
+// window.location.replace('url');
+}
