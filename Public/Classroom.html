@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
 </head>
 <body>
-<p>Classroom API Quickstart</p>
+<p class="classroom">Classroom API Quickstart</p>
 
 <!--Add buttons to initiate auth sequence and sign out-->
 <button id="authorize_button" style="display: none;">Authorize</button>
@@ -66,6 +66,7 @@
         if (isSignedIn) {
             authorizeButton.style.display = 'none';
             signoutButton.style.display = 'block';
+
             listCourses();
         } else {
             authorizeButton.style.display = 'block';
