@@ -36,6 +36,18 @@
     "Usernames": "praket742@fusdk12.net"
   }
 }];
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  var name = profile.getName();
+  var email = profile.getEmail();
+  console.log(name);
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log(email);
+  var id_token = googleUser.getAuthResponse().id_token;
+  // This is null if the 'email' scope is not present.
+}
+
 function adminClick(sqlite3) {
   json.forEach((item) => {
     usernames = item.Usernames
