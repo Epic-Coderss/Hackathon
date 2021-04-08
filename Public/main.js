@@ -40,7 +40,7 @@ function onSignIn(googleUser) {
 
 sqlite3 = requirejs(['sqlite3'])
 
-define(function(require) {
+define(function (require) {
   var dep = require('dependency');
 
   //The value returned from the function is
