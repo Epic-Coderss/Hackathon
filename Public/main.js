@@ -1,5 +1,12 @@
 // import { createRequire } from 'module';
-var require = require('sqlite3');
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(':memory:');
+requirejs.config({
+  //Pass the top-level main.js/index.js require
+  //function to requirejs so that node modules
+  //are loaded relative to the top-level JS file.
+  nodeRequire: require
+});
 let db = new sqlite3.Database('users.db', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error(err.message);
@@ -31,8 +38,17 @@ function onSignIn(googleUser) {
   // This is null if the 'email' scope is not present.
 }
 
-function adminClick() {
-  var sqlite3 = require('sqlite3');
+sqlite3 = requirejs(['sqlite3'])
+
+define(function(require) {
+  var dep = require('dependency');
+
+  //The value returned from the function is
+  //used as the module export visible to Node.
+  return function () {};
+});
+
+function adminClick(sqlite3) {
   let db = new sqlite3.Database('users.db', sqlite3.OPEN_READWRITE, (err) => {
     if (err) {
       console.error(err.message);
@@ -56,6 +72,10 @@ function adminClick() {
   } else {
     console.log('work on this')
   }
+}
+
+function guestView() {
+  window.location.replace('https://hackathon-309716.firebaseapp.com/SteamClubGuestView.html')
 }
 
 db.close((err) => {
