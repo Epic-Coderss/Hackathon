@@ -48,7 +48,17 @@
             <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
               BUTTON 1
             </div>
-          </div>
+        </div>
+        <div class="dropzone">
+            <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                BUTTON 2
+            </div>
+        </div>
+        <div class="dropzone">
+            <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                BUTTON 3
+            </div>
+        </div>
     </div>
     </div>
     <div class="dropzone" style="float: left;"></div>
@@ -215,16 +225,4 @@
 
 </body>
 
-
-<script async defer src="https://apis.google.com/js/api.js"
-        onload="this.onload=function(){};handleClientLoad()"
-        onreadystatechange="if (this.readyState === 'complete') this.onload()">
-</script>
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-        intent="WELCOME"
-        chat-title="SteamClubs"
-        agent-id="7ab15edc-f9fc-4516-8449-8e8b11931efc"
-        language-code="en"
-></df-messenger>
 </html>
