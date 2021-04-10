@@ -1,2 +1,2 @@
 # Hackathon
-Make a web page with both projects from steam and robotics club and let the student update theirs.
+A web page with information from the steam club and let the student update the page if they have access.

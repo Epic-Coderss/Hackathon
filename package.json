@@ -2,12 +2,16 @@
   "name": "hackathon",
   "version": "1.0.0",
   "description": "Make a web page with both projects from steam and robotics club and let the student update theirs.",
-  "main": "index.js",
+  "main": "main.js",
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "firebase-tools": "^9.8.0",
+    "browserify": "^17.0.0",
+    "firebase-tools": "^9.9.0",
     "google-spreadsheet": "^3.1.15",
     "googleapis": "^70.0.0",
+    "open": "^8.0.5",
+    "require.js": "^1.0.0",
+    "requirejs": "^2.3.6",
     "server-destroy": "^1.0.1",
     "sqlite3": "^5.0.2"
   },
@@ -26,5 +30,5 @@
   "bugs": {
     "url": "https://github.com/Epic-Coderss/Hackathon/issues"
   },
-  "homepage": "https://github.com/Epic-Coderss/Hackathon#readme"
+  "homepage": "https://hackathon-309716.firebaseapp.com/"
 }

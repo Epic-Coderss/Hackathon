@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Classroom API Quickstart</title>
+    <title>Classroom</title>
     <meta charset="utf-8" />
 </head>
 <body>
-<p>Classroom API Quickstart</p>
+<p id="classroom">Login to start using google classroom</p>
+
 
 <!--Add buttons to initiate auth sequence and sign out-->
 <button id="authorize_button" style="display: none;">Authorize</button>
@@ -15,18 +16,19 @@
 
 <script type="text/javascript">
     // Client ID and API key from the Developer Console
-    var CLIENT_ID = '678670925402-6i8i78i6uefifrnurciv3fdjjp9fcc6j.apps.googleusercontent.com';
-    var API_KEY = '5LFAPpwqDT9_ceavW2exsJKx';
+    var CLIENT_ID = '771815263609-0f5in4lv0sqtl509dn4bbvf0b0eolgl7.apps.googleusercontent.com';
+    var API_KEY = 'K5z7Z3Ino25FPfGTtSEV5ujL';
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/classroom/v1/rest"];
 
     // Authorization scopes required by the API; multiple scopes can be
     // included, separated by spaces.
-    var SCOPES = "https://www.googleapis.com/auth/classroom.courses.readonly";
+    var SCOPES = "https://www.googleapis.com/auth/classroom.topics https://www.googleapis.com/auth/classroom.rosters https://www.googleapis.com/auth/classroom.profile.emails https://www.googleapis.com/auth/classroom.courseworkmaterials https://www.googleapis.com/auth/classroom.coursework.students https://www.googleapis.com/auth/classroom.coursework.me https://www.googleapis.com/auth/classroom.courses";
 
     var authorizeButton = document.getElementById('authorize_button');
     var signoutButton = document.getElementById('signout_button');
+    var Classroom = document.getElementById('classroom')
 
     /**
      *  On load, called to load the auth2 library and API client library.
@@ -122,32 +124,20 @@
     }
 
 </script>
+<script src="/__/firebase/init.js"></script>
+</body>
+
 
 <script async defer src="https://apis.google.com/js/api.js"
         onload="this.onload=function(){};handleClientLoad()"
         onreadystatechange="if (this.readyState === 'complete') this.onload()">
 </script>
-<script>
-    String pageToken = null;
-    List<Course> courses = new ArrayList<Course>();
-
-    do {
-        ListCoursesResponse response = service.courses().list()
-            .setPageSize(100)
-            .setPageToken(pageToken)
-            .execute();
-        courses.addAll(response.getCourses());
-        pageToken = response.getNextPageToken();
-    } while (pageToken != null);
-
-    if (courses.isEmpty()) {
-        System.out.println("No courses found.");
-    } else {
-        System.out.println("Courses:");
-        for (Course course : courses) {
-            System.out.printf("%s (%s)\n", course.getName(), course.getId());
-        }
-    }
-</script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+        intent="WELCOME"
+        chat-title="SteamClubs"
+        agent-id="7ab15edc-f9fc-4516-8449-8e8b11931efc"
+        language-code="en"
+></df-messenger>
 </body>
 </html>
